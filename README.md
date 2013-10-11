@@ -1,7 +1,7 @@
 Alert.js
 ========
 
-JavaScript alert() method replasement for iOS 7 WebView usage
+JavaScript alert() method replacement for iOS 7 and OS X WebView usage
 
 ## Usage:
 
