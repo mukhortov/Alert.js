@@ -13,4 +13,8 @@ JavaScript alert() method replasement for iOS 7 WebView usage
 
 	alert('Confirm message', callback);
 
+## Demo:
+
+	http://mukhortov.com/alert.html
+
 Please report any issues or suggestions to the fork.
