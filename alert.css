@@ -1,5 +1,7 @@
 /* Alert.js */
 /* Overriding JavaScript alert() and confirm() methods */
+/* https://github.com/mukhortov/Alert.js/ */
+/* Petr Mukhortov */
 
 /* Core style things */
 #alert-overlay {
