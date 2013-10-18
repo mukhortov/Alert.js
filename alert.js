@@ -1,5 +1,8 @@
 /* Alert.js */
 /* Overriding native alert() function */
+/* https://github.com/mukhortov/Alert.js/ */
+/* Petr Mukhortov */
+
 (function() {
 	function removeAlert() {
 		var e = document.getElementById('_alert');
