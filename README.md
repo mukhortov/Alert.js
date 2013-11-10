@@ -17,4 +17,7 @@ JavaScript alert() method replacement for iOS 7 and OS X WebView usage
 
 http://mukhortov.com/alert.js/
 
+
+## Contributing
+
 Please report any issues or suggestions.
