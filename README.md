@@ -11,7 +11,7 @@ JavaScript alert() method replacement for iOS 7 and OS X WebView usage
 
 	confirm('Confirm message');
 
-	alert('Confirm message', callback);
+	confirm('Confirm message', callback);
 
 ## Demo:
 
