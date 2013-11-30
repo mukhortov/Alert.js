@@ -3,7 +3,7 @@
 /* https://github.com/mukhortov/Alert.js/ */
 /* Petr Mukhortov */
 
-/* Core style things */
+/* Core */
 #alert-overlay {
 	position: fixed;
 	top: 0;
@@ -46,7 +46,6 @@
 	background: -webkit-radial-gradient(circle, #f0f0f0, #e3e3e3);
 	background: -moz-radial-gradient(circle, #f0f0f0, #e3e3e3);
 	background: -ms-radial-gradient(circle, #f0f0f0, #e3e3e3);
-	/* background: -webkit-radial-gradient(circle, rgba(216, 216, 216, 0.98), rgba(225, 225, 225, 0.98)); */
 	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6);
 }
 #alert-message {
@@ -74,4 +73,18 @@ input#alert-cancel {
 }
 #alert-container input:focus {
 	 outline: none;
+}
+
+/* Animation */
+#alert-container, #alert-overlay {
+	animation: fade .1s;
+	-webkit-animation: fade .1s;
+}
+@keyframes fade {
+	from { opacity:.5; }
+	to   { opacity: .99; }
+}
+@-webkit-keyframes fade {
+	from { opacity:.5; }
+	to   { opacity: .99; }
 }

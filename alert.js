@@ -9,23 +9,23 @@
 		e.parentNode.removeChild(e);
 	}
 
-	function showAlert (arguments,callback) {
-		arguments = arguments.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+	function showAlert (message,callback) {
+		message = message.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 		var div = document.createElement("div");
 		div.id = "_alert";
-		div.innerHTML = '\
-			<div id="alert-overlay"></div>\
-			<div id="alert-container">\
-				<div id="alert-message">'+arguments+'</div>\
-				<input type="hidden" value="Cancel" id="alert-cancel"><input type="button" value="OK" id="alert-button">\
-			</div>';
+		div.innerHTML =
+			'<div id="alert-overlay"></div>'+
+			'<div id="alert-container">'+
+				'<div id="alert-message">'+message+'</div>'+
+				'<input type="hidden" value="Cancel" id="alert-cancel"><input type="button" value="OK" id="alert-button">'+
+			'</div>';
 		document.body.appendChild(div);
 
 		centerAlert();
 		window.onresize = centerAlert;
 		
 		var button = document.getElementById("alert-button");
-		button.focus();
+		//button.focus();
 		button.onclick = function() {
 			removeAlert();
 			if (callback) callback();
@@ -38,16 +38,16 @@
 		box.style.top = (window.innerHeight - box.offsetHeight) / 2 + "px";
 	}
 
-	window.alert = function(arguments,callback) {
-		showAlert (arguments,callback);
+	window.alert = function(message, callback) {
+		showAlert(message, callback);
 	};
 
-	window.confirm = function(arguments,callback) {
-		showAlert (arguments,callback);
+	window.confirm = function(message, callback) {
+		showAlert(message, callback);
 		var cancel = document.getElementById("alert-cancel");
 		cancel.parentNode.className = 'alert-confirm';
 		cancel.type = 'button';
-		cancel.focus();
+		//cancel.focus();
 		cancel.onclick = removeAlert;
 	}
 })();
