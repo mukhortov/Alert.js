@@ -11,8 +11,8 @@
 
 	function showAlert (message,callback) {
 		message = message.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-		var div = document.createElement("div");
-		div.id = "_alert";
+		var div = document.createElement('div');
+		div.id = '_alert';
 		div.innerHTML =
 			'<div id="alert-overlay"></div>'+
 			'<div id="alert-container">'+
@@ -24,7 +24,7 @@
 		centerAlert();
 		window.onresize = centerAlert;
 		
-		var button = document.getElementById("alert-button");
+		var button = document.getElementById('alert-button');
 		//button.focus();
 		button.onclick = function() {
 			removeAlert();
@@ -33,9 +33,9 @@
 	}
 
 	function centerAlert() {
-		var box = document.getElementById("alert-container");
-		box.style.left = (window.innerWidth - box.offsetWidth) / 2 + "px";
-		box.style.top = (window.innerHeight - box.offsetHeight) / 2 + "px";
+		var box = document.getElementById('lert-container');
+		box.style.left = (window.innerWidth - box.offsetWidth) / 2 + 'px';
+		box.style.top = (window.innerHeight - box.offsetHeight) / 2 + 'px';
 	}
 
 	window.alert = function(message, callback) {
@@ -44,7 +44,7 @@
 
 	window.confirm = function(message, callback) {
 		showAlert(message, callback);
-		var cancel = document.getElementById("alert-cancel");
+		var cancel = document.getElementById('alert-cancel');
 		cancel.parentNode.className = 'alert-confirm';
 		cancel.type = 'button';
 		//cancel.focus();
