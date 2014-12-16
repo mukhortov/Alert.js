@@ -33,7 +33,7 @@
 	}
 
 	function centerAlert() {
-		var box = document.getElementById('lert-container');
+		var box = document.getElementById('alert-container');
 		box.style.left = (window.innerWidth - box.offsetWidth) / 2 + 'px';
 		box.style.top = (window.innerHeight - box.offsetHeight) / 2 + 'px';
 	}
